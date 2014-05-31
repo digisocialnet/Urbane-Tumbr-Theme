@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}">
+
+<!-- 
+                                                               
+ ____  _     _ _____         _     _ _____     _                  
+|    \|_|___|_|   __|___ ___|_|___| |   | |___| |_  ___ ___ _____ 
+|  |  | | . | |__   | . |  _| | .'| | | | | -_|  _||  _| . |     |
+|____/|_|_  |_|_____|___|___|_|__,|_|_|___|___|_||_|___|___|_|_|_|
+        |___|                                                     
+
+ Urbane Theme by DSN: www.digisocialnet.com | urbanetheme.tumblr.com  -->
+<head>
+	{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+
+	<script src="//use.edgefonts.net/source-sans-pro:n3,n4,i4,n7,i7,n9,i9.js"></script>
+	<script src="//use.edgefonts.net/raleway:n1,n2,n3,n4,n5,n6,n7,n8,n9.js"></script> 
+
+	<meta name="if:Sidebar Portrait Image" content="1" />
+		<meta name="if:Header Logo" content="0"/>
+ <meta name="image:HeaderLogo" content=""/>
+	<meta name="text:Google Analytics ID" content="" />
+	<meta name="if:Search in sidebar" content="1"/>
+		<meta name="if:Description in sidebar" content="1"/>
+
+	<meta name="if:RSS" content="0"/> 
+	<meta name="if:Large Video Posts" content="1"/> 
+	<meta name="if:Large Link Posts" content="0"/> 
+	<meta name="if:Large Photo Posts" content="0"/> 
+	<meta name="if:Large Audio Posts" content="0"/> 
+	<meta name="if:Large Quote Posts" content="0"/> 
+	<meta name="if:Large Text Posts" content="0"/> 
+	<meta name="if:White Content Boxes" content="0"/> 
+	<meta name="color:SideBarBG" content="#222"/>
+	<meta name="color:SideBarText" content="#fff"/>
+	<meta name="color:Text" content="#999"/>
+	<meta name="color:Background" content="#222"/>
+	<meta name="select:Body Font" content="raleway" title="Raleway">
+	<meta name="select:Body Font" content="source-sans-pro" title="Source Sans Pro">
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+
+
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternative" type="application/rss+xml" href="{RSS}">
+
+<link href="http://static.tumblr.com/h1dcvfk/Kghn6dvq0/urbanestyles.min.css" rel="stylesheet">
+
+
+	<!-- Style Sheets 
+
+<link href="http://static.tumblr.com/h1dcvfk/kHon6dn3m/bootstrap-urbane.css" rel="stylesheet">
+		
+	<link href="http://static.tumblr.com/h1dcvfk/gjon5uc4u/urbane-icons-dsn-embedded.css" rel="stylesheet">
+	<link href="https://www.dropbox.com/s/qk7jiuqm99ti5cl/urbane.css?dl=1" rel="stylesheet">
+	<link href="http://static.tumblr.com/h1dcvfk/ExSn5povt/flex-embed.css" rel="stylesheet">
+	<link href="//oss.maxcdn.com/rrssb/1.6.0/css/rrssb.css" rel="stylesheet"> -->
+
+
+
+
+	<style>
+	.user-pic {padding-top:15px; padding-bottom: 15px;}
+	body {font-family: {select:Body Font}, avenir, helvetica, sans-serif;background-color: {color:Background};}
+	.masthead h1 a {line-height: 1.1;color: {TitleColor};font-family: {TitleFont};font-weight: {TitleFontWeight};}
+	.form-control {border-color: {color:Text};}
+	.link-post h3  {background-color:rgba({RGBAccentColor},.4);transition: .4s all;}
+	.link-post h3:hover  {background-color:rgba({RGBAccentColor},1.0);transition: .4s all;}
+	.link-post h3 a:hover, a.list-group-item:hover {background-color:rgba({RGBAccentColor},1.0);transition: .4s all;text-decoration: none;}
+	.link-post h3 a {display: block; color: #ffffff;}
+	a.list-group-item:hover {color: #fff;}
+
+	.excerpt-container a {color: {AccentColor}; font-weight: 700;}
+	.quote-post .dsn-iconfont-quote-left, .quote-post .dsn-iconfont-quote-right {color: {AccentColor};}
+	.tags li a {background-color: rgba({RGBAccentColor},.4);transition: .4s all; }
+	.tags li a:hover {background-color: rgba({RGBAccentColor},1.0);transition: .4s all; text-decoration: none; }
+	.grid-item h3 a {color: #fff;}
+	.right-sidebar input {background-color: {color:SideBarBG};}
+
+	.excerpt-container a, .excerpt-container small a, .fixed-footer a {color: {AccentColor};fill: {AccentColor};}
+	.excerpt-container, .dsn-iconfont-clock, .tagline {color: {color:Text};fill: {color:Text};}
+	.link-thumbnail-details:hover {background-color: rgba({RGBAccentColor},.6);}
+	.preload * {
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+		-ms-transition: none !important;
+		-o-transition: none !important;
+	}
+
+	.img-holder {background-color: {AccentColor};border-radius:6px;}
+	.navmenu-default, .navbar-default .navbar-offcanvas {border-color: rgba(255,255,255,.4);}
+	.navmenu {background-color: {color:Navigation Background};}
+	.grid-item.sidebar {background-color: rgba(255,255,255,0);}
+	.list-group-item {background-color: {color:SideBarBG};}
+
+	{block:IfWhiteContentBoxes}
+	.grid-item h3 a {color: #555;text-shadow:none;}
+	.grid-item h3 a:hover {color: white;}
+
+	#prev-page, .jumpPage, #next-page, .currentPage {border-color: #dadada;}
+	a.list-group-item:hover {color:#fff;}
+	.excerpt-container, .link-post .excerpt-container, .text-post .excerpt-container {border: #dadada 1px solid !important;background: none; background-color: #fff;}
+	.list-group-item {border: #fff 1px solid !important; background-color: {color:SideBarBG};}
+	.excerpt-nav {background: none; background-color: #fff; border-top:1px solid rgba(40,40,40,.2);}
+	.img-holder, .grid-item .img-holder img {border: none;}
+	.excerpt-container h3 {background-color: #e9e9e9;border-top:1px solid rgba(40,40,40,.2); border-bottom:1px solid rgba(170,170,170,.2); color: #333;-webkit-text-shadow: none;
+		-moz-text-shadow: none;
+		text-shadow: none !important;}
+.chat li {color:#333;background: -moz-radial-gradient(center, ellipse cover, rgba(150,150,150,0) 0%, rgba(150,150,150,0.65) 94%, rgba(150,150,150,0.65) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(150,150,150,0)), color-stop(94%,rgba(150,150,150,0.65)), color-stop(100%,rgba(150,150,150,0.65)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(150,150,150,0) 0%,rgba(150,150,150,0.65) 94%,rgba(150,150,150,0.65) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(150,150,150,0) 0%,rgba(150,150,150,0.65) 94%,rgba(150,150,150,0.65) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(150,150,150,0) 0%,rgba(150,150,150,0.65) 94%,rgba(150,150,150,0.65) 100%);
+background: radial-gradient(ellipse at center, rgba(150,150,150,0) 0%,rgba(150,150,150,0.65) 94%,rgba(150,150,150,0.65) 100%);}
+		{/block:IfWhiteContentBoxes}
+
+	.right-sidebar * {color: {color:SideBarText} !important;}
+
+		{CustomCSS}
+
+		</style>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+  <body {block:IndexPage}class="home"{/block:IndexPage}><a href="#top"></a>
+  	
+
+  	
+
+  	<!--- OFF CANVAS NAV -->
+  	<button type="button" class="navbar-toggle">
+  		<span class="icon-bar"></span>
+  		<span class="icon-bar"></span>
+  		<span class="icon-bar"></span>
+  	</button>
+
+<!---  <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm">
+</div> -->
+
+
+
+<div class="header-image text-center FlexEmbed FlexEmbed--3by1" style="background-image:url({HeaderImage})">
+	<div class="masthead-box"><span class="masthead">{block:IfHeaderLogo}<a href="/" title="{lang:Home}"><img class="header-logo" src="{image:HeaderLogo}"></a>{/block:IfHeaderLogo}{block:IfNotHeaderLogo}<h1><a href="/" title="{lang:Home}">{Title}</a></h1>{/block:IfNotHeaderLogo} 							{block:IfNotDescriptionInSidebar}	
+					{block:Description}	<span class="masthead-description text-left">
+			
+						{Description}
+			</span>
+					{/block:Description} 
+										{/block:IfNotDescriptionInSidebar}	</span>
+
+
+
+
+
+</div>
+</div>
+<div class="container-fluid">
+
+	<BR>{block:TagPage}
+		<h1>Posts tagged "{Tag}"</h1>
+		{/block:TagPage}
+		{block:DayPage}
+		<h1>{Month} {DayOfMonth}, {Year}</h1>
+		{/block:DayPage}
+		<div class="text-center {block:PermalinkPage}perma-container{/block:PermalinkPage}" id="grid-container-urbane">
+
+			<div class="grid-item sidebar stamp right-sidebar">
+				<div class="list-group">
+
+					{block:IfSidebarPortraitImage}<div class="list-group-item text-center"><a href="/" title="{lang:Home}"><img src="{PortraitURL-128}" class="user-pic"></a></div>{/block:IfSidebarPortraitImage}
+					{block:IfSearchInSidebar}			
+					<div class="list-group-item"><div class="search form-group">
+						<form action="/search" method="get" role="form">
+							<input type="search" value="" class="search-text form-control" name="q" results="5" placeholder="Search" />
+						</form>
+					</div></div>
+							{/block:IfSearchInSidebar}
+							{block:IfDescriptionInSidebar}	
+					{block:Description}	<div class="list-group-item">
+			
+						{Description}
+			</div>
+					{/block:Description} 
+										{/block:IfDescriptionInSidebar}	
+
+
+					{block:HasPages}
+					{block:Pages}
+					<a href="{URL}" class="list-group-item">{Label}</a>
+					{/block:Pages}
+					{/block:HasPages}
+					{block:SubmissionsEnabled}
+					<a class="list-group-item" href="/submit">{SubmitLabel}</a>
+					{/block:SubmissionsEnabled}
+					{block:AskEnabled}
+					<a class="list-group-item" href="/ask">{AskLabel}</a>
+					{/block:AskEnabled}
+	{block:ifRSS}
+					<a href="{RSS}" class="list-group-item">RSS</a>
+					{/block:ifRSS}
+				</div>
+			</div>
+
+
+
+
+			{block:Posts}
+			<div class="grid-item post {block:PermalinkPage}large perma-post{/block:PermalinkPage}	{block:Photoset}photoset-post{/block:Photoset} {block:Link}link-post text-post {block:IfLargeLinkPosts}large{/block:IfLargeLinkPosts}{/block:Link} {block:Text}text-post {block:IfLargeTextPosts}large{/block:IfLargeTextPosts}{/block:Text} {block:Quote}quote-post {block:IfLargeQuotePosts}large{/block:IfLargeQuotePosts} {/block:Quote} {block:Photo}photo-post {block:IfLargePhotoPosts}large{/block:IfLargePhotoPosts}{/block:Photo} {block:Audio}audio-post {block:IfLargeAudioPosts}large{/block:IfLargeAudioPosts}{/block:Audio} {block:Video}video-post {block:IfLargeVideoPosts}large{/block:IfLargeVideoPosts}{/block:Video} 
+			{block:Answer}answer-post
+			{/block:Answer} {block:Chat}chat-post{/block:Chat} {TagsAsClasses}">
+
+
+
+
+
+
+
+			{block:Text}  <div class="excerpt-container">{block:Title}<h3>{Title}</h3>{/block:Title}
+
+			<div class="text-scroll"> {Body} <i class="dsn-iconfont-right"></i></div>
+			<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+
+				{ReblogButton size="12"}  <div class="share-button"></div>
+
+
+			</small></span> </div> 	
+
+
+
+			{/block:Text}
+
+
+
+
+
+
+
+
+
+			{block:Photo}
+			<div class="excerpt-container all-round">
+			<div class="img-holder">{block:IndexPage}<a href="{Permalink}"><img src="{PhotoURL-400}" alt="{PhotoAlt}" /></a>{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PlaintextCaption} - {PlaintextTitle}">{LinkCloseTag}{/block:PermalinkPage}
+			</div>
+
+	
+
+			<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+
+				{ReblogButton size="12"}  <div class="share-button"></div>
+
+
+			</small></span> 	</div>
+
+
+
+			{/block:Photo}
+
+					{block:Panorama}
+					<div class="excerpt-container all-round">
+			<div class="img-holder">{block:IndexPage}{LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}" />{LinkCloseTag}{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PlaintextCaption} - {PlaintextTitle}">{LinkCloseTag}{/block:PermalinkPage}
+			</div>
+
+
+			<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+
+				{ReblogButton size="12"}  <div class="share-button"></div>
+
+
+			</small></span> 	</div>
+
+
+{/block:Panorama}
+
+
+
+
+
+
+
+
+
+			{block:Photoset}
+			<div class="excerpt-container all-round">
+	<div class="img-holder">
+				{block:IndexPage} 
+<a href="{Permalink}"><div class="photoset-ui">
+			 {block:Photos}
+       <div class="FlexEmbed FlexEmbed--16by9" style="background-image:url({PhotoURL-500})"></div>
+    {/block:Photos}
+</div></a>
+{/block:IndexPage} 
+{block:PermalinkPage} 
+
+{photoset}
+
+{/block:PermalinkPage} 
+</div>
+		
+
+			
+			<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+				{ReblogButton size="12"}  <div class="share-button"></div>
+
+
+			</small></span> 	</div>
+			{/block:Photoset}
+
+
+
+
+
+
+
+			{block:Quote}
+			<div class="excerpt-container">	
+				<h2 class="{Length}-quote"><i class="dsn-iconfont-quote-left"></i> {Quote}&nbsp;<i class="dsn-iconfont-quote-right"></i></h2>
+				{block:Source}<span class="quote-attr">- {Source}</span>		{/block:Source}
+
+
+				<span class="excerpt-nav"><small><a href="{Permalink}#notes"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+
+					{ReblogButton size="12"}  <div class="share-button"></div>
+
+
+				</small></span>  </div>
+
+
+				{/block:Quote}
+
+
+
+
+
+
+
+
+
+
+
+				{block:Link}
+				<div class="excerpt-container">
+
+
+
+					{block:Thumbnail}               
+					<a href="{URL}"><div class="FlexEmbed FlexEmbed--16by9 link-thumbnail" style="background-image:url('{Thumbnail}')"><div class="link-thumbnail-details"><BR>{block:Host}<span class="link-host">{Host}</span>{/block:Host}</div></div></a>{/block:Thumbnail}
+
+					<h3><a href="{block:IndexPage}{permalink}{/block:IndexPage}{block:PermalinkPage}{URL}{/block:PermalinkPage}">{Name} <i class="dsn-iconfont-right"></i></a></h3>
+
+
+					{block:PermalinkPage}{Description}
+					{block:PermalinkPage}
+
+					<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+
+						{ReblogButton size="12"} <div class="share-button"></div>
+
+
+					</small></span> </div> 
+
+
+					{/block:Link}
+
+
+
+
+
+
+
+					{block:Chat}
+
+
+					<div class="excerpt-container">{block:Title}<h3 class="post-title">{Title}</h3>{/block:Title}
+						<ul class="chat">
+							{block:Lines}
+							<li class="{Alt}">
+								{block:Label}<span class="chat-person">{Label}</span>{/block:Label}
+								<p class="chat-text">{Line}</p>
+							</li>
+							{/block:Lines}
+						</ul>
+
+
+						<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+
+							{ReblogButton size="12"}  <div class="share-button"></div>
+
+
+						</small></span> </div> 
+						{/block:Chat}
+
+
+
+
+
+
+
+
+						{block:Audio}
+
+						<div class="excerpt-container">{block:TrackName}<h3><a href="{Permalink}">{TrackName}</a></h3>{/block:TrackName}
+							<div class="audio-player">{AudioPlayerBlack}</div>
+							{block:AudioEmbed}<div class="FlexEmbed FlexEmbed--16by9">
+							{AudioEmbed}</div>{/block:AudioEmbed}
+
+
+							<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a> 
+								{ReblogButton size="12"}  <div class="share-button"></div>
+
+
+							</small></span> </div> 
+							{/block:Audio}
+
+
+
+
+
+
+
+
+							{block:Video}
+
+							<div class="excerpt-container">
+								<div class="video-player FlexEmbed FlexEmbed--16by9">{Video-400}</div>
+
+
+
+								<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a>  
+
+									{ReblogButton size="12"} <div class="share-button"></div>
+
+
+								</small></span> </div> 
+
+
+
+
+
+								{/block:Video}
+
+
+
+
+
+
+
+
+								{block:Answer}
+
+								<div class="excerpt-container"><div class="question"><h3><img src="{AskerPortraitURL-128}" class="asker-portrait"> {Asker}: {Question}</h3></div>
+
+								<div class="answer">
+									{block:Answerer}<img src="{AnswererPortraitURL-30}" class="answerer-portrait">{/block:Answerer} {Replies}
+								</div>
+
+								<span class="excerpt-nav"><small><a href="{Permalink}"><i class="dsn-iconfont-clock"></i> {TimeAgo}</a>  {LikeButton size="12"} <a href="{Permalink}#notes">{NoteCount}</a> 
+									
+									{ReblogButton size="12"}
+
+									<div class="share-button"></div>
+
+
+								</small></span> </div> 
+
+
+
+
+								{/block:Answer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</div>
+
+							{block:PermalinkPage}
+
+
+
+							{block:Caption}
+							<div class="grid-item perma-captions"><div class="excerpt-container all-round">	
+								<h3>Details</h3>
+								<div class="caption">{Caption}</div>
+
+							</div></div> 
+							{/block:Caption}
+
+
+							{block:HasTags}
+							<div class="grid-item"><div class="excerpt-container all-round">	
+								<h3>Tagged</h3>
+								<ul class="tags">
+									{block:Tags}<li><a href="{TagURL}">{Tag}</a> </li>{/block:Tags}
+								</ul>
+							</div></div>
+							{/block:HasTags}
+
+
+
+							{block:Exif} <div class="grid-item exif-data"><div class="excerpt-container all-round">	
+							<h3>
+								<i class="dsn-iconfont-picture"></i> Metadata
+							</h3>
+							<ul>
+								{block:Camera}
+								<li>{Camera}</li>
+								{/block:Camera}
+								{block:Aperture}
+								<li>{Aperture}</li>
+								{/block:Aperture}
+								{block:Exposure}
+								<li>{Exposure}</li>
+								{/block:Exposure}
+								{block:FocalLength}
+								<li>{FocalLength}</li>
+								{/block:FocalLength}
+
+							</ul>
+						</div>
+					</div></div>{/block:Exif}
+
+
+
+					<div class="grid-item perma-share"><div class="excerpt-container all-round">
+						<h3>Share this post</h3>
+						<ul class="perma-like-reblog-box">
+							<li>{LikeButton size="50"}</li>
+							<li>{ReblogButton size="50"}</li>
+						</ul>
+						<!-- Buttons start here. Copy this ul to your document. -->
+						<ul class="rrssb-buttons clearfix">
+							<li class="email">
+
+								<!-- Replace subject with your message using URL Endocding: http://meyerweb.com/eric/tools/dencoder/ -->
+								<a href="mailto:?subject=Check%20out{URLEncodedTitle}%20on%20Tumblr&amp;body={URLEncodedPermalink}">
+									<span class="icon">
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve"><g><path d="M20.111 26.147c-2.336 1.051-4.361 1.401-7.125 1.401c-6.462 0-12.146-4.633-12.146-12.265 c0-7.94 5.762-14.833 14.561-14.833c6.853 0 11.8 4.7 11.8 11.252c0 5.684-3.194 9.265-7.399 9.3 c-1.829 0-3.153-0.934-3.347-2.997h-0.077c-1.208 1.986-2.96 2.997-5.023 2.997c-2.532 0-4.361-1.868-4.361-5.062 c0-4.749 3.504-9.071 9.111-9.071c1.713 0 3.7 0.4 4.6 0.973l-1.169 7.203c-0.388 2.298-0.116 3.3 1 3.4 c1.673 0 3.773-2.102 3.773-6.58c0-5.061-3.27-8.994-9.303-8.994c-5.957 0-11.175 4.673-11.175 12.1 c0 6.5 4.2 10.2 10 10.201c1.986 0 4.089-0.43 5.646-1.245L20.111 26.147z M16.646 10.1 c-0.311-0.078-0.701-0.155-1.207-0.155c-2.571 0-4.595 2.53-4.595 5.529c0 1.5 0.7 2.4 1.9 2.4 c1.441 0 2.959-1.828 3.311-4.087L16.646 10.068z"/></g></svg>
+									</span>
+									<span class="text">email</span>
+								</a>
+							</li>
+							<li class="facebook">
+                        <!-- Replace with your URL. For best results, make sure you page has the proper FB Open Graph tags in header: 
+                        https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/ -->
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={URLEncodedPermalink}" class="popup">
+                        	<span class="icon">
+                        		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                        			<path d="M27.825,4.783c0-2.427-2.182-4.608-4.608-4.608H4.783c-2.422,0-4.608,2.182-4.608,4.608v18.434
+                        			c0,2.427,2.181,4.608,4.608,4.608H14V17.379h-3.379v-4.608H14v-1.795c0-3.089,2.335-5.885,5.192-5.885h3.718v4.608h-3.726
+                        			c-0.408,0-0.884,0.492-0.884,1.236v1.836h4.609v4.608h-4.609v10.446h4.916c2.422,0,4.608-2.188,4.608-4.608V4.783z"/>
+                        		</svg>
+                        	</span>
+                        	<span class="text">facebook</span>
+                        </a>
+                    </li>
+                    <li class="tumblr">
+                    	<a href="http://tumblr.com/share?s=&amp;v=3&t={URLEncodedTitle}&amp;u={URLEncodedPermalink}">
+                    		<span class="icon">
+                    			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve"><path d="M18.02 21.842c-2.029 0.052-2.422-1.396-2.439-2.446v-7.294h4.729V7.874h-4.71V1.592c0 0-3.653 0-3.714 0 s-0.167 0.053-0.182 0.186c-0.218 1.935-1.144 5.33-4.988 6.688v3.637h2.927v7.677c0 2.8 1.7 6.7 7.3 6.6 c1.863-0.03 3.934-0.795 4.392-1.453l-1.22-3.539C19.595 21.6 18.7 21.8 18 21.842z"/></svg>
+                    		</span>
+                    		<span class="text">tumblr</span>
+                    	</a>
+                    </li> 
+
+                    <li class="twitter">
+                    	<!-- Replace href with your Meta and URL information  -->
+                    	<a href="http://twitter.com/home?status={URLEncodedTitle}%20{block:Twitter}by%20{TwitterUsername}%20{/block:Twitter}{URLEncodedPermalink}" class="popup">
+                    		<span class="icon">
+                    			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    			width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                    			<path d="M24.253,8.756C24.689,17.08,18.297,24.182,9.97,24.62c-3.122,0.162-6.219-0.646-8.861-2.32
+                    			c2.703,0.179,5.376-0.648,7.508-2.321c-2.072-0.247-3.818-1.661-4.489-3.638c0.801,0.128,1.62,0.076,2.399-0.155
+                    			C4.045,15.72,2.215,13.6,2.115,11.077c0.688,0.275,1.426,0.407,2.168,0.386c-2.135-1.65-2.729-4.621-1.394-6.965
+                    			C5.575,7.816,9.54,9.84,13.803,10.071c-0.842-2.739,0.694-5.64,3.434-6.482c2.018-0.623,4.212,0.044,5.546,1.683
+                    			c1.186-0.213,2.318-0.662,3.329-1.317c-0.385,1.256-1.247,2.312-2.399,2.942c1.048-0.106,2.069-0.394,3.019-0.851
+                    			C26.275,7.229,25.39,8.196,24.253,8.756z"/>
+                    		</svg>
+                    	</span>
+                    	<span class="text">twitter</span>
+                    </a>
+                </li>
+                <li class="reddit">
+                	<a href="http://www.reddit.com/submit?url={URLEncodedPermalink}">
+                		<span class="icon">
+                			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve"><g><path d="M11.794 15.316c0-1.029-0.835-1.895-1.866-1.895c-1.03 0-1.893 0.865-1.893 1.895s0.863 1.9 1.9 1.9 C10.958 17.2 11.8 16.3 11.8 15.316z"/><path d="M18.1 13.422c-1.029 0-1.895 0.864-1.895 1.895c0 1 0.9 1.9 1.9 1.865c1.031 0 1.869-0.836 1.869-1.865 C19.969 14.3 19.1 13.4 18.1 13.422z"/><path d="M17.527 19.791c-0.678 0.678-1.826 1.006-3.514 1.006c-0.004 0-0.009 0-0.014 0c-0.004 0-0.01 0-0.015 0 c-1.686 0-2.834-0.328-3.51-1.005c-0.264-0.265-0.693-0.265-0.958 0c-0.264 0.265-0.264 0.7 0 1 c0.943 0.9 2.4 1.4 4.5 1.402c0.005 0 0 0 0 0c0.005 0 0 0 0 0c2.066 0 3.527-0.459 4.47-1.402 c0.265-0.264 0.265-0.693 0.002-0.958C18.221 19.5 17.8 19.5 17.5 19.791z"/><path d="M27.707 13.267c0-1.785-1.453-3.237-3.236-3.237c-0.793 0-1.518 0.287-2.082 0.761c-2.039-1.295-4.646-2.069-7.438-2.219 l1.483-4.691l4.062 0.956c0.071 1.4 1.3 2.6 2.7 2.555c1.488 0 2.695-1.208 2.695-2.695C25.881 3.2 24.7 2 23.2 2 c-1.059 0-1.979 0.616-2.42 1.508l-4.633-1.091c-0.344-0.081-0.693 0.118-0.803 0.455l-1.793 5.7 C10.548 8.6 7.7 9.4 5.6 10.75C5.006 10.3 4.3 10 3.5 10.029c-1.785 0-3.237 1.452-3.237 3.2 c0 1.1 0.6 2.1 1.4 2.69c-0.04 0.272-0.061 0.551-0.061 0.831c0 2.3 1.3 4.4 3.7 5.9 c2.299 1.5 5.3 2.3 8.6 2.325c3.228 0 6.271-0.825 8.571-2.325c2.387-1.56 3.7-3.66 3.7-5.917 c0-0.26-0.016-0.514-0.051-0.768C27.088 15.5 27.7 14.4 27.7 13.267z M23.186 3.355c0.74 0 1.3 0.6 1.3 1.3 c0 0.738-0.6 1.34-1.34 1.34s-1.342-0.602-1.342-1.34C21.844 4 22.4 3.4 23.2 3.355z M1.648 13.3 c0-1.038 0.844-1.882 1.882-1.882c0.31 0 0.6 0.1 0.9 0.209c-1.049 0.868-1.813 1.861-2.26 2.9 C1.832 14.2 1.6 13.8 1.6 13.267z M21.773 21.57c-2.082 1.357-4.863 2.105-7.831 2.105c-2.967 0-5.747-0.748-7.828-2.105 c-1.991-1.301-3.088-3-3.088-4.782c0-1.784 1.097-3.484 3.088-4.784c2.081-1.358 4.861-2.106 7.828-2.106 c2.967 0 5.7 0.7 7.8 2.106c1.99 1.3 3.1 3 3.1 4.784C24.859 18.6 23.8 20.3 21.8 21.57z M25.787 14.6 c-0.432-1.084-1.191-2.095-2.244-2.977c0.273-0.156 0.59-0.245 0.928-0.245c1.035 0 1.9 0.8 1.9 1.9 C26.354 13.8 26.1 14.3 25.8 14.605z"/></g></svg>
+                		</span>
+                		<span class="text">reddit</span>
+                	</a>
+                </li> 
+                <li class="googleplus">
+                	<!-- Replace href with your meta and URL information.  -->
+                	<a href="https://plus.google.com/share?url={URLEncodedTitle}%20{URLEncodedPermalink}" class="popup">
+                		<span class="icon">
+                			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                				<g>
+                					<g>
+                						<path d="M14.703,15.854l-1.219-0.948c-0.372-0.308-0.88-0.715-0.88-1.459c0-0.748,0.508-1.223,0.95-1.663
+                						c1.42-1.119,2.839-2.309,2.839-4.817c0-2.58-1.621-3.937-2.399-4.581h2.097l2.202-1.383h-6.67c-1.83,0-4.467,0.433-6.398,2.027
+                						C3.768,4.287,3.059,6.018,3.059,7.576c0,2.634,2.022,5.328,5.604,5.328c0.339,0,0.71-0.033,1.083-0.068
+                						c-0.167,0.408-0.336,0.748-0.336,1.324c0,1.04,0.551,1.685,1.011,2.297c-1.524,0.104-4.37,0.273-6.467,1.562
+                						c-1.998,1.188-2.605,2.916-2.605,4.137c0,2.512,2.358,4.84,7.289,4.84c5.822,0,8.904-3.223,8.904-6.41
+                						c0.008-2.327-1.359-3.489-2.829-4.731H14.703z M10.269,11.951c-2.912,0-4.231-3.765-4.231-6.037c0-0.884,0.168-1.797,0.744-2.511
+                						c0.543-0.679,1.489-1.12,2.372-1.12c2.807,0,4.256,3.798,4.256,6.242c0,0.612-0.067,1.694-0.845,2.478
+                						c-0.537,0.55-1.438,0.948-2.295,0.951V11.951z M10.302,25.609c-3.621,0-5.957-1.732-5.957-4.142c0-2.408,2.165-3.223,2.911-3.492
+                						c1.421-0.479,3.25-0.545,3.555-0.545c0.338,0,0.52,0,0.766,0.034c2.574,1.838,3.706,2.757,3.706,4.479
+                						c-0.002,2.073-1.736,3.665-4.982,3.649L10.302,25.609z"/>
+                						<polygon points="23.254,11.89 23.254,8.521 21.569,8.521 21.569,11.89 18.202,11.89 18.202,13.604 21.569,13.604 21.569,17.004
+                						23.254,17.004 23.254,13.604 26.653,13.604 26.653,11.89      "/>
+                					</g>
+                				</g>
+                			</svg>
+                		</span>
+                		<span class="text">google+</span>
+                	</a>
+                </li>
+                    <!-- <li class="youtube">
+                        <a href="#">
+                            <span class="icon">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                                    <path d="M27.688,8.512c0-2.268-1.825-4.093-4.106-4.093H4.389c-2.245,0-4.076,1.825-4.076,4.093v10.976 c0,2.268,1.825,4.093,4.076,4.093h19.192c2.274,0,4.106-1.825,4.106-4.093V8.512z M11.263,18.632V8.321l7.817,5.155L11.263,18.632z" />
+                                </svg>
+                            </span>
+                            <span class="text">youtube</span>
+                        </a>
+                    </li> -->
+                    <li class="pinterest">
+                    	<!-- Replace href with your meta and URL information.  -->
+                    	<a href="http://pinterest.com/pin/create/button/?url={URLEncodedPermalink}">
+                    		<span class="icon">
+                    			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                    				<path d="M14.021,1.57C6.96,1.57,1.236,7.293,1.236,14.355c0,7.062,5.724,12.785,12.785,12.785c7.061,0,12.785-5.725,12.785-12.785
+                    				C26.807,7.294,21.082,1.57,14.021,1.57z M15.261,18.655c-1.161-0.09-1.649-0.666-2.559-1.219c-0.501,2.626-1.113,5.145-2.925,6.458
+                    				c-0.559-3.971,0.822-6.951,1.462-10.116c-1.093-1.84,0.132-5.545,2.438-4.632c2.837,1.123-2.458,6.842,1.099,7.557
+                    				c3.711,0.744,5.227-6.439,2.925-8.775c-3.325-3.374-9.678-0.077-8.897,4.754c0.19,1.178,1.408,1.538,0.489,3.168
+                    				C7.165,15.378,6.53,13.7,6.611,11.462c0.131-3.662,3.291-6.227,6.46-6.582c4.007-0.448,7.771,1.474,8.29,5.239
+                    				c0.579,4.255-1.816,8.865-6.102,8.533L15.261,18.655z"/>
+                    			</svg>
+                    		</span>
+                    		<span class="text">pinterest</span>
+                    	</a>
+                    </li>
+                    
+                </ul>
+                <!-- Buttons end here -->
+
+            </div></div>
+            {/block:PermalinkPage}
+            {/block:Posts}
+
+
+
+            {block:PermalinkPage}
+
+
+
+
+
+
+
+            {block:PostNotes}
+            <div class="grid-item"><div class="excerpt-container all-round">	
+            	<h3>
+            		Notes
+            	</h3>
+            	<div id="notes">
+            		{PostNotes}
+            	</div>
+            </div></div>
+            {/block:PostNotes} 
+
+
+
+        
+
+
+
+
+
+
+            {block:PermalinkPagination} 
+            <div class="grid-item"><div class="excerpt-container all-round"><div class="post-pagination">	
+            	{block:NextPost}
+            	<a id="next-page" href="{NextPost}"><i class="dsn-iconfont-left-open"></i></a>
+            	{/block:NextPost} 
+
+            	{block:PreviousPost}
+            	<a id="prev-page" href="{PreviousPost}"><i class="dsn-iconfont-right-open"></i></a>
+            	{/block:PreviousPost}
+</div>
+
+            </div></div>         {/block:PermalinkPagination}
+
+   
+
+            {/block:PermalinkPage}
+
+
+
+        </div>
+
+
+        {block:Pagination}
+        <div class="pagination-box" style="display:none">	
+
+        	<nav class="pagination">
+        		{block:PreviousPage}
+        		<a id="prev-page" href="{PreviousPage}"><i class="dsn-iconfont-left-open"></i></a>
+        		{/block:PreviousPage}  
+        		{block:JumpPagination length="5"}
+        		{block:CurrentPage}
+        		<span class="currentPage">{PageNumber}</span>
+        		{/block:CurrentPage}
+
+        		{block:JumpPage}
+        		<a class="jumpPage" href="{URL}">{PageNumber}</a>
+        		{/block:JumpPage}
+        		{/block:JumpPagination}
+        		{block:NextPage}
+        		<a id="next-page" href="{NextPage}"><i class="dsn-iconfont-right-open"></i></a>
+        		{/block:NextPage}  
+        	</nav> 
+
+        </div>{/block:Pagination}
+
+
+        <div class="fixed-footer">
+        	<a href="#top">	<i class="dsn-iconfont-up-open"></i> Top</a>  
+        	© {CopyrightYears} {Title} > Powered by <a href="http://tumblr.com">Tumblr</a>. Theme designed by <a href="http://digisocialnet.com">
+        	<svg version="1.1" id="dsnlogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	width="746px" height="231px" viewBox="0 0 746 231" enable-background="new 0 0 746 231" xml:space="preserve">
+        	<path fill="#ffffff" d="M705.074,125.239v72.534c-0.178,9.956-8.267,18.046-18.223,18.046s-18.045-8.09-18.045-18.046v-72.534
+        	c0-50.757-21.867-76.535-65.068-76.535c-43.2,0-65.068,25.778-65.068,76.535v72.534c0,9.956-8.088,18.046-18.044,18.046
+        	s-18.045-8.09-18.045-18.046v-72.534c0-70.58,37.867-112.714,101.246-112.714C667.207,12.525,705.074,54.66,705.074,125.239z
+        	M139.639,15.459H60.171c-9.956,0-18.045,8.089-18.045,18.044c0,9.956,8.089,18.045,18.045,18.045h79.468
+        	c50.757,0,76.535,21.867,76.535,65.067c0,43.202-25.778,65.068-76.535,65.068H60.171c-9.956,0-18.045,8.089-18.045,18.045
+        	s8.089,18.045,18.045,18.045h79.468c70.579,0,112.714-37.867,112.714-101.068C252.353,53.327,210.218,15.459,139.639,15.459z
+        	M409.956,96.527h-39.823c-1.027,0-2.027,0.105-3.008,0.267H330.31c-25.601,0-29.067-11.822-29.067-23.378
+        	c0-11.556,3.377-23.379,29.067-23.379h83.38c10.133,0,18.311-8.178,18.311-18.312c0-10.133-8.178-18.311-18.311-18.311h-83.38
+        	c-48.446,0-65.69,30.934-65.69,59.913c0,28.979,17.245,59.912,65.69,59.912h39.823c0.598,0,1.187-0.033,1.77-0.089h38.053
+        	c25.601,0,29.067,11.822,29.067,23.379c0,11.556-3.377,23.378-29.067,23.378H319.91c-10.134,0-18.312,8.178-18.312,18.311
+        	c0,10.135,8.178,18.312,18.312,18.312h89.958c48.445,0,65.689-30.934,65.779-60.091C475.647,127.461,458.402,96.527,409.956,96.527z
+        	"/>
+        </svg></a>
+    </div> 
+<script type="text/javascript" src="http://static.tumblr.com/h1dcvfk/ZgQn6dvj5/urbane-app.min.js"></script>
+
+    <!-- JS Code
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="http://static.tumblr.com/h1dcvfk/ocan5pp3p/imagesloaded.js"></script>
+
+  
+    <script type="text/javascript" src="http://static.tumblr.com/h1dcvfk/PWVn5tkn0/packery.js"></script> 
+
+
+
+
+
+    <script src="http://oss.maxcdn.com/rrssb/1.6.0/js/rrssb.min.js"></script>
+
+
+
+ <script src="http://www.dropbox.com/s/kwr4g7dmqiiknry/urbane.js?dl=1"></script> 
+
+
+
+
+ 
+    <script type="text/javascript" src="http://static.tumblr.com/h1dcvfk/xQon5y656/jquery-ias.min.js"></script> -->
+{block:IndexPage}
+<script>
+
+$(document).ready(function() {
+
+    var container = document.querySelector('#grid-container-urbane');
+    var pckry = new Packery(container, {
+        // options
+        itemSelector: '.grid-item',
+        stamp: '.stamp',
+        transitionDuration: '200ms',
+        gutter: 0
+    });
+    var ias = $.ias({
+        container: '#grid-container-urbane',
+        item: '.post',
+        pagination: '.pagination-box',
+        next: '#next-page',
+        delay: 500
+    });
+
+
+    ias.on('render', function(items) {
+        $(items).css({
+            opacity: 0
+        });
+    });
+
+
+    ias.on('rendered', function(items) {
+
+        imagesLoaded(items, function() {
+            pckry.appended(items);
+                    pckry.layout();
+
+
+
+
+
+        });
+
+
+
+
+
+    });
+
+    ias.extension(new IASSpinnerExtension({
+        src: 'http://static.tumblr.com/h1dcvfk/PFzn5yp9z/load.svg', // optionally
+    }));
+});
+
+</script>
+{/block:IndexPage}
+
+
+
+{block:PermalinkPage}
+<script>
+$(document).ready(function() {
+    var container = document.querySelector('#grid-container-urbane');
+    var pckry;
+    imagesLoaded(container, function() {
+        pckry = new Packery(container, {
+            // options
+            itemSelector: '.grid-item',
+            stamp: '.stamp',
+            transitionDuration: '200ms',
+            gutter: 0
+        });
+        $container.packery('fit', '.perma-post', 1, 1);
+                pckry.layout();
+
+    });
+});
+</script>
+
+{/block:PermalinkPage}
+
+
+
+
+    {block:IfGoogleAnalyticsID}
+    <script>
+    var _gaq=[['_setAccount','{text:Google Analytics ID}'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    	s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    {/block:IfGoogleAnalyticsID}
+
+</body>
+</html>
